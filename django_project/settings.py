@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from environs import Env
+import os
 
 env = Env()
 env.read_env()
@@ -81,7 +82,7 @@ WSGI_APPLICATION = "django_project.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL", default = "sqlite:///db.sqlite3"),
+    "default": env.dj_db_url("DATABASE_URL", default=os.path.join(BASE_DIR, "db.sqlite3")),
 }
 
 
