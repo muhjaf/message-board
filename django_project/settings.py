@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-e8^#jz@%i%re&528rf5hvakhz^52b@v8k6!0p0si0y&se20-gj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -134,4 +134,4 @@ STORAGES = {
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CSRF_TRUSTED_ORIGINS = ["https://*.vercel.app"]
+CSRF_TRUSTED_ORIGINS = ["https://*.netlify.app"]
